@@ -12,11 +12,12 @@
     top: 0;
     width: 100%;
     background-color: transparent;
+    height: 90px
 }
 .active { 
-    background-color: #fff;
+    background-color: black;
     transition: 0.7s;
-    
+    box-shadow: 0 6px 8px rgba(108, 122, 137, 0.5), 0 0 4px rgba(108, 122, 137, 0.5);
  }
 .nav-link,.navbar-brand {
     cursor: pointer;
@@ -27,13 +28,14 @@
     margin-left: 15%;
 }
 .nav-link {
-    margin-right: 1em;
+    margin-right: 2em;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
+    color: #FFEAD4;
 }
 
 .bignav #main-navigation .nav-link:hover{
-    color: #d91111;
+    color:  #ec7829;
 }
 .navbar-collapse {
     justify-content: flex-end;
@@ -41,7 +43,6 @@
 .nav-item{
     display: inline;
     text-align: center;
-    width: 120px;
 }
 
 .navbar-nav{
@@ -54,7 +55,7 @@
 ----------------------------------------------------- */
 
 #sidebarCollapse {
-    background-color:  #3e0242;
+    background-color: #ec7829;
     box-shadow: none;
     outline: none !important;
     border: none;
@@ -63,7 +64,7 @@
 #sidebar {
     width: 250px;
     position: fixed;
-    top: 101px;
+    top: 91px;
     left: -250px;
     height: 100vh;
     z-index: 999;
@@ -82,7 +83,7 @@
     height: 40px;
     line-height: 35px;
     text-align: center;
-    background: #3e0242;
+    background: #ec7829;
     position: absolute;
     right: 0;
     cursor: pointer;
@@ -166,7 +167,8 @@ ul.CTAs li a {
 }
 
 
-/*good food aection start*/
+
+/*good food section start*/
 #good_food{
     color: white;
 }
@@ -184,6 +186,7 @@ ul.CTAs li a {
     padding:10px 30px 10px 30px;
     color: white;
     background-color: #ec7829;
+    /*background-color: #f25525;*/
 }
 #good_food button:hover{
     background-color: orange;
@@ -194,13 +197,123 @@ ul.CTAs li a {
     text-align: center;
 }
 .good_food_sm_part1{
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0.7);
     z-index: 1;
 }
 .good_food_sm_part2{
     margin-top: -300px;
 }
 /*good food aection end*/
+
+
+
+/*Gallery*/
+#gallery h1{
+    color: #FFEAD4;
+}
+
+#gallery .card{
+    width: 100%; 
+    height: 253px;  
+    border: 0; 
+    border-radius: 8px
+}
+
+
+#gallery .card .card-body #gradient-div{
+    height: 100%; 
+    color: white; 
+    background: linear-gradient(to bottom, transparent, black);
+    border-radius: 8px;
+
+}
+
+#gallery .card .card-body #gradient-div p{
+    font-size: 13px;
+    position: relative; 
+    top: 75%;
+    padding-left: 20px
+}
+
+#gallery .card .card-body #gradient-div h6{
+    position: relative;
+    top: 54%;
+    /*left: 75%*/
+    padding-left: 74%;
+}
+
+#gallery .card{
+   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+   box-shadow: 0 6px 10px rgba(108, 122, 137, 0.8), 0 0 6px rgba(108, 122, 137, 0.5);
+}
+
+#gallery .card:hover{
+    box-shadow:0 10px 20px rgba(108, 122, 137, 0.6), 0 4px 8px rgba(108, 122, 137, 0.6);
+    transform: scale(1.04);
+}
+
+#gallery .card #gall-img-1{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-2{
+    background: url('Images/image8.jpeg'); 
+    /*height: 253px;
+    width: 100%;*/
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px;
+}
+
+#gallery .card #gall-img-3{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-4{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-5{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-6{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-7{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+
+/*Gallery end*/
+
+
 
 
 /*order your fav section start*/
@@ -230,7 +343,7 @@ ul.CTAs li a {
     text-align: left;
 }
 
-    /*small viwe*/
+    /*small view*/
 .order_your_fav_sm_part2{
       margin-top: -180px;
       background-color:rgba(0,0,0,0.5);
@@ -265,9 +378,13 @@ ul.CTAs li a {
 .color_overlay{
     width: 100%;
     height: 500px;
-    background: #505D68;
-    opacity: .7;
+    background:black;
+    opacity: .4;
     position: absolute;
+}
+.box_contact{
+    background-color:#A9A9A9;
+    box-shadow: 0 6px 10px rgba(0,0,0,.9), 0 0 6px rgba(0,0,0,.5);
 }
 /*map section end*/
 
@@ -276,5 +393,8 @@ ul.CTAs li a {
 footer{
     text-align: center;
     color: #FFEAD4;
+}
+footer i:hover{
+    color: #ec7829;
 }
 /*footer end*/
