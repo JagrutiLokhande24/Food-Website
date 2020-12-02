@@ -1,479 +1,400 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Home</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<link rel="stylesheet" type="text/css" href="Home.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css"><!--bootstrap link-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- fontawesome -->
+*{
+    margin: 0;
+    padding: 0;
+}
 
-	<!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+/* ---------------------------------------------------
+    NavBAR 
+----------------------------------------------------- */
 
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+.navbar {
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 90px
+}
+.active { 
+    background-color: black;
+    transition: 0.7s;
+    box-shadow: 0 6px 8px rgba(108, 122, 137, 0.5), 0 0 4px rgba(108, 122, 137, 0.5);
+ }
+.nav-link,.navbar-brand {
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
 
-	<script src="js/jquery-3.5.1.min.js"></script>
-</head>
-<body>
+ #lg img{
+    margin-left: 15%;
+}
+.nav-link {
+    margin-right: 2em;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFEAD4;
+}
 
-	<!-------------------------------------wrapper start------------------------------------->
-    <div class="wrapper">
-        <!------------------------------ Sidebar-------------------------------->
-        <nav id="sidebar">
-            <div id="dismiss">
-                <i class="fa fa-arrow-left"></i>
-            </div>
+.bignav #main-navigation .nav-link:hover{
+    color:  #ec7829;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+.nav-item{
+    display: inline;
+    text-align: center;
+}
 
-            <div class="sidebar-header">
-                
-            </div>
-
-            <ul class="list-unstyled components">
-                <center><b><h3>MENU</h3></b></center>
-                <li class="active">
-                    <a href="#">HOME</a>   
-                </li>
-                <li>
-                    <a href="#">ORDER NOW</a>  
-                </li>
-                <li>
-                    <a href="#">REVIEW</a>
-                </li>
-                <li>
-                    <a href="#">CONTACT US</a>
-                </li>
-                <li>
-                    <a href="#">LOGIN</a>
-                </li>
-            </ul>
-
-            <ul class="list-unstyled CTAs">
-               <li style="display: flex; padding-left: 35px">
-                    <a href="#" class="facebook"><i class="fa fa-facebook fa-sm"></i></a>
-                    <a href="#" class="twitter"><i class="fa fa-twitter fa-sm"></i></a>
-                    <a href="#" class="linkedin"><i class="fa fa-linkedin-square fa-sm"></i></a>
-                    <a href="#" class="pinterest"><i class="fa fa-pinterest fa-sm"></i></a>
-               </li>
-            </ul>
-        </nav>
-
-	
-
-    <!------------content start----------------->
-    <div id="content">
-            <div class="overlay"></div>
-
-    		<nav class="navbar navbar-expand-xl fixed-top header bignav d-none d-xl-block">
-                <div class="container-fluid">
-
-                    <div class="ml-4 pl-4">
-                        <a href="A3home.html" class="navbar-brand" id="lg">
-                            <img src="Images/logo.png" height="75" width="240">
-                        </a>
-                    </div>
-                    <button id="navbarToggle" class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#main-navigation" style="outline: none; border: none;">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse mr-2" id="main-navigation">
-                        <ul class="navbar-nav">
-                           <li class="nav-item">
-                                <a class="nav-link" style="color:   #ec7829;">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="services.html">ORDER NOW</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">REVIEW</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">CONTACT US</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">LOGIN</a>
-                            </li>
-                        </ul>
-                    </div> 
-                </div>
-            </nav>
+.navbar-nav{
+    align-items: center;
+}
 
 
-            <nav class="navbar navbar-expand-lg fixed-top header d-block d-xl-none">
-                <div class="container-fluid">
-                    
-                    <div>
-                        <a href="A3home" class="navbar-brand" id="sm">
-                            <img src="Images/logo.png" height="70" width="210">
-                        </a>
-                    </div>
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <!-- <i class="fa fa-align-left"></i> -->
-                        <b>Menu</b>
-                    </button>
-                    
-                </div>
-            </nav>
+/* ---------------------------------------------------
+    SIDEBAR 
+----------------------------------------------------- */
+
+#sidebarCollapse {
+    background-color: #ec7829;
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 91px;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: linear-gradient(to right, #99f2ff 0%, #ffffff 100%);
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    background: #ec7829;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #3e0242;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: linear-gradient(to right, #99f2ff 0%, #ffffff 100%);
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul h3 {
+    color:  #3e0242;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    color:  #3e0242;
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    color: #d91111;
+    background: #fff;
+}
 
 
-			<!--  main div start -->
-			<div id="main_div">
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
 
-				<!-- goof food section start -->
-				<!-- large view -->
-				<div class="container-fluid pt-5 pb-5 d-md-block d-none" id="good_food">
-					<div class="row">
-						<div class="col-md-5 offset-md-1 col-12">
-							<h1 class="d-none d-lg-block" style="padding-top: 100px">Good Food <br> Delivered Fast !</h1><br>
-							<h1 class="d-block d-lg-none" style="font-size: 38px;">Good Food <br> Delivered Fast !</h1><br>
-							<h5>Order your favorite dishes and get them <br> delivered at your doorstep in No-time.</h5><br>
-							<button>ORDER NOW</button>
-						</div>
-						<div class="col-md-6 col-12">
-							<img src="Images/Home_header.png" class="img img-fluid" width="800" height="700">
-						</div>
-					</div>
-				</div>
+ul.CTAs {
+    padding: 20px;
+}
 
-				<!-- small view -->
-				<div class="container-fluid pt-5 pb-5 d-md-none d-block good_food_sm" id="good_food">
-					<div class="row">
-						<div class="col-md-5 offset-md-1 col-12  p-3 good_food_sm_part1">
-							<h1 class="d-none d-lg-block">Good Food <br> Delivered Fast !</h1><br>
-							<h1 class="d-block d-lg-none" style="font-size: 38px;">Good Food <br> Delivered Fast !</h1><br>
-							<h5>Order your favorite dishes and get them delivered at your doorstep in No-time.</h5><br>
-							<button>ORDER NOW</button>
-						</div>
-						<div class="col-md-6 col-12 good_food_sm_part2">
-							<img src="Images/Home_header.png" class="img img-fluid" width="800" height="700">
-						</div>
-					</div>
-				</div>
-				<!-- good food section end -->
+ul.CTAs li a {
+    text-align: center;
+    font-size: 20px !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
 
-				<!-- Gallery -->
-				<div class="container d-none d-lg-block" id="gallery">
-					<div class="row pl-3 p-3">
-						<h1><b>Discover Wide range of Variety</b></h1>
-					</div>
-
-					<div class="row">
-						<div class=" col-lg-3 mb-3 p-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-1">
-									<div id="gradient-div">
-											<p><b>Salmon & <br> Tuna Sashimi</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class=" col-lg-6 mb-3 p-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-2">
-									<div id="gradient-div">
-											<p><b>Tuna <br> Teriyaki Nigiri</b></p>
-											<h6 style="padding-left: 88%"><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class=" col-lg-3 mb-3 p-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-3">
-									<div id="gradient-div">
-											<p><b>Spicy <br> Tuna Gunkan</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class=" col-lg-3 mb-3 p-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-4">
-									<div id="gradient-div" style="">
-											<p><b>Smokey <br> Handroll Temaki</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class=" col-lg-3 mb-3 p-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-5">
-									<div id="gradient-div" style="">
-											<p><b>Tuna <br> Maki</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class=" col-lg-3 mb-3 p-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-6">
-									<div id="gradient-div" style="">
-											<p><b>Sweet Chilli <br> Chicken Bento</b></p>
-											<h6><b>£9.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class=" col-lg-3 mb-3 p-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-7">
-									<div id="gradient-div" style="">
-											<p><b>Prawn <br> Yakisoba</b></p>
-											<h6><b>£7.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Gallery  mobile-->
-		<div class="container d-block d-lg-none" id="gallery">
-
-					<div class="row pl-3 p-3 justify-content-center">
-						<h1><b>Discover</b></h1>
-					</div>
-
-					<div class="row">
-						<div class="col-6 mb-3 pr-2">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-1">
-									<div id="gradient-div">
-											<p><b>Salmon & <br> Tuna Sashimi</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-6 mb-3 pl-2">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-2">
-									<div id="gradient-div">
-											<p><b>Salmon & <br> Tuna Sashimi</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-12 mb-3">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-3">
-									<div id="gradient-div">
-											<p><b>Tuna <br>Teriyaki Nigiri</b></p>
-											<h6 style="padding-left: 87%"><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+}
 
 
-					<div class="row">
-						<div class="col-6 mb-3 pr-2">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-4">
-									<div id="gradient-div">
-											<p><b>Smokey <br> Handroll Temaki</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-6 mb-3 pl-2">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-5">
-									<div id="gradient-div">
-											<p><b>Tuna <br> Maki</b></p>
-											<h6><b>£3.99</b></h6>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-6 mb-3 pr-2">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-6">
-									<div id="gradient-div">
-											<p><b>Sweet Chilli <br> Chicken Bento</b></p>
-											<h6><b>£9.99</b></h6>	
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-6 mb-3 pl-2">
-							<div class="card">
-								<div class="card-body p-0" id="gall-img-7">
-									<div id="gradient-div">
-											<p><b>Prawn <br> Yakisoba</b></p>
-											<h6><b>£7.99</b></h6>	
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-		</div>
+/*main div*/
+#main_div{
+    background-color: black;
+}
+
+
+
+/*good food section start*/
+#good_food{
+    color: white;
+}
+#good_food h1{
+    font-size: 60px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+#good_food h5{
+    color: #FFEAD4;
+}
+#good_food button{
+    border: none;
+    border-radius: 5px;
+    padding:10px 30px 10px 30px;
+    color: white;
+    background-color: #ec7829;
+    /*background-color: #f25525;*/
+}
+#good_food button:hover{
+    background-color: orange;
+}
+
+    /*small viwe*/
+.good_food_sm{
+    text-align: center;
+}
+.good_food_sm_part1{
+    background-color:rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.good_food_sm_part2{
+    margin-top: -300px;
+}
+/*good food aection end*/
+
+
+
+/*Gallery*/
+#gallery h1{
+    color: #FFEAD4;
+}
+
+#gallery .card{
+    width: 100%; 
+    height: 253px;  
+    border: 0; 
+    border-radius: 8px
+}
+
+
+#gallery .card .card-body #gradient-div{
+    height: 100%; 
+    color: white; 
+    background: linear-gradient(to bottom, transparent, black);
+    border-radius: 8px;
+
+}
+
+#gallery .card .card-body #gradient-div p{
+    font-size: 13px;
+    position: relative; 
+    top: 75%;
+    padding-left: 20px
+}
+
+#gallery .card .card-body #gradient-div h6{
+    position: relative;
+    top: 54%;
+    /*left: 75%*/
+    padding-left: 74%;
+}
+
+#gallery .card{
+   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+   box-shadow: 0 6px 10px rgba(108, 122, 137, 0.8), 0 0 6px rgba(108, 122, 137, 0.5);
+}
+
+#gallery .card:hover{
+    box-shadow:0 10px 20px rgba(108, 122, 137, 0.6), 0 4px 8px rgba(108, 122, 137, 0.6);
+    transform: scale(1.04);
+}
+
+#gallery .card #gall-img-1{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-2{
+    background: url('Images/image8.jpeg'); 
+    /*height: 253px;
+    width: 100%;*/
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px;
+}
+
+#gallery .card #gall-img-3{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-4{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-5{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-6{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+#gallery .card #gall-img-7{
+    background: url('Images/image1.jpeg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 100% 100%; 
+    border-radius: 8px
+}
+
+
+/*Gallery end*/
 
 
 
 
+/*order your fav section start*/
+#order_your_fav{
+    text-align: right;
+    color: white;
+}
+#order_your_fav h1{
+    font-size: 60px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+#order_your_fav h5{
+    color: #FFEAD4;
+}
+#order_your_fav button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    color: white;
+    background-color: #ec7829;
+}
+#order_your_fav button:hover{
+    background-color: orange;
+}
+#order_your_fav img{
+    text-align: left;
+}
+
+    /*small view*/
+.order_your_fav_sm_part2{
+      margin-top: -180px;
+      background-color:rgba(0,0,0,0.5);
+}
+/*order your fav section end*/
 
 
-				<!-- order your favourite meal section start -->
-				<!-- large view -->
-				<div class="container-fluid pt-5 pb-5 d-md-block d-none" id="order_your_fav">
-					<div class="row">
-						<div class="col-md-3 offset-md-1 col-12">
-							<center><img src="Images/chopstick.png" class="img img-fluid" width="100" height="100" align="center"></center>
-						</div>
-						<div class="col-md-7 col-12">
-							<h1 class="d-lg-block d-none">order your <br> favourite meals from <br> Sushi And Bento House</h1><br>
-							<h1 class="d-lg-none d-block" style="font-size: 33px">order your  favourite meals from  Sushi And Bento House</h1><br>
-							<h5>We will always be offering great food at <br> affordable prices.</h5><br>
-							<button>DISCOVER</button>
-						</div>
-					</div>
-				</div>
-
-				<!-- small view -->
-				<div class="container-fluid pt-5 pb-5 d-md-none d-block order_your_fav_sm" id="order_your_fav" style="text-align: center;
-				">
-					<div class="row">
-						<div class="col-md-4 col-12">
-							<center><img src="Images/chopstick_sm.png" class="img img-fluid pt-5" width="500" height="400" align="center"></center>
-						</div>
-						<div class="col-md-7 col-12 p-3 order_your_fav_sm_part2">
-							<h1 class="d-lg-block d-none">order your <br> favourite meals from <br> Sushi And Bento House</h1><br>
-							<h1 class="d-lg-none d-block" style="font-size: 33px">order your  favourite meals from  Sushi And Bento House</h1><br>
-							<!-- <h5>We will always be offering great food at <br> affordable prices.</h5><br> -->
-							<button>DISCOVER</button>
-						</div>
-					</div>
-				</div>
-				<!--  order your favourite meal section end -->
-
-
-				<!-- map start -->
-				<a href="https://www.google.com/maps/place/Sacchidanand+Utech/@21.1144629,79.0387169,17z/data=!3m1!4b1!4m5!3m4!1s0x3bd4bf8ad8d6dcd1:0xf6ff761a6b1f3b86!8m2!3d21.1144629!4d79.0409056"><div class="container-fluid color_overlay d-none d-lg-block"></div></a> 
-				
-				<div class="container-fluid">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.952423173845!2d79.03871691466715!3d21.114462885952026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf8ad8d6dcd1%3A0xf6ff761a6b1f3b86!2sSacchidanand%20Utech!5e0!3m2!1sen!2sin!4v1606800166271!5m2!1sen!2sin" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-				</div>
-				<!-- map end -->
+/*map section start*/
+#map_section{
+    color: #4E5051 ;
+}
+#map_section h1{
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #505D68;
+}
+#map_section h5{
+    color: #505D68;
+}
+#map_section h6{
+    color: #505D68;
+}
+#map_section p{
+    font-size: 12px;
+    color:#A1AEB7;
+}
+#map_section i{
+    float: left;
+    color: #505D68;
+}
+.color_overlay{
+    width: 100%;
+    height: 500px;
+    background:black;
+    opacity: .4;
+    position: absolute;
+}
+.box_contact{
+    background-color:#A9A9A9;
+    box-shadow: 0 6px 10px rgba(0,0,0,.9), 0 0 6px rgba(0,0,0,.5);
+}
+/*map section end*/
 
 
-				<!-- map & contact section start -->
-				<div class="container-fluid pt-5 pb-5 d-none d-xl-block" id="map_section" style="margin-top: -510px;">
-					<div class="row">
-						<div class="col-xl-6 col-12">
-						
-						</div>
-						<div class="col-xl-4 offset-xl-1 col-12 box_contact">
-							<div class="contact_box mt-2 mb-2 pt-3 pb-3 pl-5 pr-5" style="background-color: white">
-								<h1 class="d-none d-md-block">Contact Us</h1><br>
-								<h1 class="d-block d-md-none" style="font-size: 40px">Contact Us</h1><br>
-								<h5>We'd love to hear from you</h5><br>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua.</p><br>
-								<i class="fa fa-map-marker fa-lg pr-3" aria-hidden="true"></i><h6>385 Noah Place Suite 878</h6><br>
-								<i class="fa fa-phone fa-lg pr-3" aria-hidden="true"></i><h6>877-255-7945</h6><br>
-								<i class="fa fa-envelope fa-lg pr-3" aria-hidden="true"></i><h6>info@form.com</h6>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- small view -->
-				<div class="container-fluid pt-5 pb-1 d-block d-xl-none map_section_sm" id="map_section">
-					<div class="row">
-						<div class="col-xl-6 col-12">
-						
-						</div>
-						<div class="col-xl-5 col-12">
-							<div class="mt-2 mb-2 pt-2 pb-4 pl-5 pr-5 box_contact" style="background-color: white">
-								<h1 class="d-none d-md-block">Contact Us</h1><br>
-								<h1 class="d-block d-md-none" style="font-size: 38px">Contact Us</h1>
-								<h5>We'd love to hear from you</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua.</p><br>
-								<i class="fa fa-map-marker fa-lg pr-3" aria-hidden="true"></i><h6>385 Noah Place Suite 878</h6><br>
-								<i class="fa fa-phone fa-lg pr-3" aria-hidden="true"></i><h6>877-255-7945</h6><br>
-								<i class="fa fa-envelope fa-lg pr-3" aria-hidden="true"></i><h6>info@form.com</h6>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- map & contact section end -->
-
-				<!-- footer start -->
-				<footer>
-					<div class="pt-2 pb-3">
-						<img src="Images/logo.png" width="210" height="70" class="img img-fluid"><br>
-						<i class="fa fa-twitter fa-md pl-3 pr-3" aria-hidden="true"></i>
-						<i class="fa fa-facebook fa-md pl-3 pr-3" aria-hidden="true"></i>
-						<i class="fa fa-instagram fa-md pl-3 pr-3" aria-hidden="true"></i>
-						<i class="fa fa-linkedin fa-md pl-3 pr-3" aria-hidden="true"></i><br><br>
-						<h6>©2018 - Form | All right reserved</h6>
-					</div>
-				</footer>
-				<!-- footer end -->
-
-			</div>
-			<!-- main div end -->
-
-		</div>
-        <!-------------------------------------Page Content end------------------------------------->
-    </div>
-    <!-------------------------------------wrapper end------------------------------------->
-
-	 <!--JS-->
-	<script src="js/jquery-3.5.1.slim.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-
-	 <!-- jQuery Custom Scroller CDN -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-	<script type="text/javascript">
-	        $(document).ready(function () {
-	            $("#sidebar").mCustomScrollbar({
-	                theme: "minimal"
-	            });
-
-	            $('#dismiss, .overlay').on('click', function () {
-	                $('#sidebar').removeClass('active');
-	                $('.overlay').removeClass('active');
-	            });
-
-	            $('#sidebarCollapse').on('click', function () {
-	                $('#sidebar').addClass('active');
-	                $('.overlay').addClass('active');
-	                $('.collapse.in').toggleClass('in');
-	                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-	            });
-	        });
-	</script>
-
-	<script>
-				$(window).on("scroll", function() {
-				    if($(window).scrollTop() > 50) {
-				        $(".header").addClass("active");
-				    } else {
-				        //remove the background property so it comes transparent again (defined in your css)
-				       $(".header").removeClass("active");
-				    }
-				});
-			</script>
-</body>
-</html>
+/*footer start*/
+footer{
+    text-align: center;
+    color: #FFEAD4;
+}
+footer i:hover{
+    color: #ec7829;
+}
+/*footer end*/
