@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /* ---------------------------------------------------
@@ -21,7 +22,7 @@
  }
 .nav-link,.navbar-brand {
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
 }
 
  #lg img{
@@ -30,7 +31,7 @@
 .nav-link {
     margin-right: 2em;
     font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
     color: #FFEAD4;
 }
 
@@ -176,6 +177,7 @@ ul.CTAs li a {
     font-size: 60px;
     letter-spacing: 3px;
     font-weight: 700;
+    /*font-family: 'Ubuntu', sans-serif;*/
 }
 #good_food h5{
     color: #FFEAD4;
